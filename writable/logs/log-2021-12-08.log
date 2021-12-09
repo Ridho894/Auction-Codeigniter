@@ -9,3 +9,15 @@ Main connection [MySQLi]: Access denied for user '****'@'localhost' (using passw
 #5 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #6 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
 #7 {main}
+CRITICAL - 2021-12-08 22:20:27 --> Trying to access array offset on value of type null
+#0 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\app\Views\komik\detail.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\Users\\Asus\\D...', 7)
+#1 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\View\View.php(214): include('C:\\Users\\Asus\\D...')
+#2 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('komik/detail', Array, true)
+#4 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\app\Controllers\Komik.php(40): view('komik/detail', Array)
+#5 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(824): App\Controllers\Komik->detail('cover.jpg')
+#6 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#7 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#10 {main}
