@@ -1,0 +1,11 @@
+ERROR - 2021-12-08 19:26:10 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: YES)
+CRITICAL - 2021-12-08 19:26:10 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+#0 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\app\Controllers\Komik.php(14): CodeIgniter\Database\BaseConnection->query('SELECT * FROM k...')
+#2 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(824): App\Controllers\Komik->index()
+#3 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#4 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#7 {main}
