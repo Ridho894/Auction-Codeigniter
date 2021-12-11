@@ -106,3 +106,99 @@ CRITICAL - 2021-12-09 00:09:35 --> Undefined variable $validation
 #8 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
 #10 {main}
+ERROR - 2021-12-09 18:45:39 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2021-12-09 18:45:39 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\app\Models\KomikModel.php(16): CodeIgniter\BaseModel->findAll()
+#5 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\app\Controllers\Komik.php(19): App\Models\KomikModel->getKomik()
+#6 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(824): App\Controllers\Komik->index()
+#7 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#8 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#11 {main}
+ERROR - 2021-12-09 18:45:43 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2021-12-09 18:45:43 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\app\Models\KomikModel.php(16): CodeIgniter\BaseModel->findAll()
+#5 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\app\Controllers\Komik.php(19): App\Models\KomikModel->getKomik()
+#6 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(824): App\Controllers\Komik->index()
+#7 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#8 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#11 {main}
+CRITICAL - 2021-12-09 18:49:55 --> {field} harus diisi is not a valid rule.
+#0 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Validation\Validation.php(285): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('{field} harus d...')
+#1 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Validation\Validation.php(151): CodeIgniter\Validation\Validation->processRules('errors', 'errors', NULL, Array, Array)
+#2 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#3 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\app\Controllers\Komik.php(48): CodeIgniter\Controller->validate(Array)
+#4 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(824): App\Controllers\Komik->save()
+#5 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#6 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#9 {main}
+CRITICAL - 2021-12-09 18:49:58 --> {field} harus diisi is not a valid rule.
+#0 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Validation\Validation.php(285): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('{field} harus d...')
+#1 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Validation\Validation.php(151): CodeIgniter\Validation\Validation->processRules('errors', 'errors', NULL, Array, Array)
+#2 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#3 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\app\Controllers\Komik.php(48): CodeIgniter\Controller->validate(Array)
+#4 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(824): App\Controllers\Komik->save()
+#5 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#6 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#9 {main}
+CRITICAL - 2021-12-09 18:50:03 --> {field} harus diisi is not a valid rule.
+#0 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Validation\Validation.php(285): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('{field} harus d...')
+#1 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Validation\Validation.php(151): CodeIgniter\Validation\Validation->processRules('errors', 'errors', NULL, Array, Array)
+#2 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#3 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\app\Controllers\Komik.php(48): CodeIgniter\Controller->validate(Array)
+#4 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(824): App\Controllers\Komik->save()
+#5 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#6 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#9 {main}
+CRITICAL - 2021-12-09 18:50:09 --> {field} harus diisi is not a valid rule.
+#0 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Validation\Validation.php(285): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('{field} harus d...')
+#1 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Validation\Validation.php(151): CodeIgniter\Validation\Validation->processRules('errors', 'errors', NULL, Array, Array)
+#2 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#3 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\app\Controllers\Komik.php(48): CodeIgniter\Controller->validate(Array)
+#4 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(824): App\Controllers\Komik->save()
+#5 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#6 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#9 {main}
+CRITICAL - 2021-12-09 18:52:28 --> {field} harus diisi is not a valid rule.
+#0 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Validation\Validation.php(285): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('{field} harus d...')
+#1 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Validation\Validation.php(151): CodeIgniter\Validation\Validation->processRules('errors', 'errors', NULL, Array, Array)
+#2 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#3 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\app\Controllers\Komik.php(48): CodeIgniter\Controller->validate(Array)
+#4 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(824): App\Controllers\Komik->save()
+#5 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#6 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#9 {main}
+CRITICAL - 2021-12-09 18:53:51 --> {field} harus diisi is not a valid rule.
+#0 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Validation\Validation.php(285): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('{field} harus d...')
+#1 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Validation\Validation.php(151): CodeIgniter\Validation\Validation->processRules('errors', 'errors', NULL, Array, Array)
+#2 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#3 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\app\Controllers\Komik.php(48): CodeIgniter\Controller->validate(Array)
+#4 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(824): App\Controllers\Komik->save()
+#5 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#6 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Asus\Documents\GitHub\CRUD-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#9 {main}

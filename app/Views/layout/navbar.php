@@ -5,7 +5,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="/">Home</a>
                 </li>
@@ -19,6 +19,8 @@
                     <a class="nav-link" href="/komik">Komik</a>
                 </li>
             </ul>
+            <button class="btn btn-primary" type="button">LOGIN</button>
+            <button class="btn btn-danger ml-3" type="button">REGISTER</button>
         </div>
     </div>
 </nav>
