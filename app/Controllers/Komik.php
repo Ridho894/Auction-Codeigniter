@@ -52,9 +52,8 @@ class Komik extends BaseController
                 ]
             ],
             'sampul' => [
-                'rules' => 'uploaded[sampul]|max_size[sampul,1024]|is_image[sampul]|mime_in[sampul,image/jpg,image/jpeg,image/png]',
+                'rules' => 'max_size[sampul,1024]|is_image[sampul]|mime_in[sampul,image/jpg,image/jpeg,image/png]',
                 'errors' => [
-                    'uploaded' => 'pilih gambar sampul terlebih dahulu',
                     'max_size' => 'ukuran gambar terlalu besar',
                     'is_image' => 'yang anda pilih bukan gambar',
                     'mime_in' => 'yang anda pilih bukan gambar',
@@ -67,10 +66,17 @@ class Komik extends BaseController
         }
         // Ambil Gambar
         $fileSampul = $this->request->getFile('sampul');
-        // Pindah Gambar ke folder img
-        $fileSampul->move('img');
+        if ($fileSampul->getError() == 4) {
+            $namaSampul = 'default.jpg';
+        } else {
+            // Generate Nama Sampul Random
+            $namaSampul = $fileSampul->getRandomName();
+            // Pindah Gambar ke folder img
+            $fileSampul->move('img', $namaSampul);
+        }
         // Ambil Nama File
-        $namaSampul = $fileSampul->getName();
+        // $namaSampul = $fileSampul->getName();
+
 
         $slug = url_title($this->request->getVar('judul'), '-', true);
         $this->komikModel->save([
@@ -87,7 +93,15 @@ class Komik extends BaseController
     }
     public function delete($id)
     {
-        $this->komikModel->delete($id);
+        // Cari Gambar berdasarkan ID
+        $komik = $this->komikModel->find($id);
+        // Cek Jika file gambar default
+        if ($komik['sampul'] != 'default.jpg') {
+            // Hapus Gambar
+            unlink('img/' . $komik['sampul']);
+        } else {
+            $this->komikModel->delete($id);
+        }
         session()->setFlashdata('pesan', 'Data Berhasil Dihapus.');
         return redirect()->to('/komik');
     }
