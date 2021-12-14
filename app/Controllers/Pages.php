@@ -2,26 +2,36 @@
 
 namespace App\Controllers;
 
+use App\Models\ProductModel;
+
 class Pages extends BaseController
 {
+    protected $productModel;
+
+    public function __construct()
+    {
+        $this->productModel = new ProductModel();
+    }
+
     public function index()
     {
         $data = [
-            "title" => "Home | CodeIgniter"
+            "title" => "Home | Auction",
+            "product" => $this->productModel->getProduct(),
         ];
         return view("pages/home", $data);
     }
     public function about()
     {
         $data = [
-            "title" => "About | CodeIgniter"
+            "title" => "About | Auction"
         ];
         return view("pages/about", $data);
     }
     public function contact()
     {
         $data = [
-            "title" => "Contact Us | CodeIgniter",
+            "title" => "Contact Us | Auction",
             "Alamat" => [
                 [
                     "tipe" => "Rumah",
@@ -36,5 +46,13 @@ class Pages extends BaseController
             ]
         ];
         return view("pages/contact", $data);
+    }
+    public function detailProduct($slug)
+    {
+        $data = [
+            "title" => "Details | Auction",
+            "product" => $this->productModel->getProduct($slug),
+        ];
+        return view('pages/detail_product', $data);
     }
 }

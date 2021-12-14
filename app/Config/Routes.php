@@ -32,11 +32,11 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Pages::index');
-$routes->get('/komik/create', 'Komik::create');
-$routes->get('/komik/edit/(:segment)', 'Komik::edit/$1');
-$routes->delete('/komik/(:num)', 'Komik::delete/$1');
-$routes->get('/komik/(:any)', 'Komik::detail/$1');
-
+$routes->get('/product/create', 'Product::create');
+$routes->get('/product/edit/(:segment)', 'Product::edit/$1');
+$routes->delete('/product/(:num)', 'Product::delete/$1');
+$routes->get('/product/(:any)', 'Product::detail/$1');
+$routes->get('/pages/detail_product/(:any)', 'Pages::detailProduct/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
