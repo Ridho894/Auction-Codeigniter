@@ -14,7 +14,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><?= $product['judul']; ?></h5>
                             <p class="card-text">Price: <b><?= $product['price']; ?></b></p>
-                            <p class="card-text"><small class="text-muted">Penerbit: <b><?= $product['penerbit']; ?></b></small></p>
+                            <p class="card-text"><small class="text-muted">Description: <b><?= $product['description']; ?></b></small></p>
                             <a href="/product/edit/<?= $product['slug']; ?>" class="btn btn-warning">Edit</a>
                             <form action="/product/<?= $product['id']; ?>" method="POST" class="d-inline">
                                 <?= csrf_field(); ?>

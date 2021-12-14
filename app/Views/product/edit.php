@@ -28,11 +28,11 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="penerbit" class="col-sm-2 col-form-label">Penerbit</label>
+                    <label for="description" class="col-sm-2 col-form-label">Description</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control <?= ($validation->hasError('penerbit')) ? 'is-invalid' : ''; ?>" id="penerbit" name="penerbit" value="<?= (old('penerbit')) ? old('penerbit') : $product['penerbit'] ?>">
+                        <input type="text" class="form-control <?= ($validation->hasError('description')) ? 'is-invalid' : ''; ?>" id="description" name="description" value="<?= (old('description')) ? old('description') : $product['description'] ?>">
                         <div class="invalid-feedback">
-                            <?= $validation->getError('penerbit'); ?>
+                            <?= $validation->getError('description'); ?>
                         </div>
                     </div>
                 </div>

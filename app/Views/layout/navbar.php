@@ -18,6 +18,9 @@
                 <li class="nav-item">
                     <a class="nav-link <?= $title === "Daftar Product" ? 'active' : ''; ?>" href="/product">My Product</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/orang">Orang</a>
+                </li>
             </ul>
             <?php if (logged_in()) : ?>
                 <a href="/logout" class="btn btn-danger" type="button">LOGOUT</a>

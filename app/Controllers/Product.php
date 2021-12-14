@@ -47,8 +47,20 @@ class Product extends BaseController
             'judul' => [
                 'rules' => 'required|is_unique[product.judul]',
                 'errors' => [
-                    'required' => '{field} product harus diisi',
-                    'is_unique' => '{field} product sudah terdaftar'
+                    'required' => '{field} harus diisi',
+                    'is_unique' => '{field} sudah terdaftar'
+                ]
+            ],
+            'price' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+            'description' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
                 ]
             ],
             'sampul' => [
@@ -83,7 +95,7 @@ class Product extends BaseController
             'judul' => $this->request->getVar('judul'),
             'slug' => $slug,
             'price' => $this->request->getVar('price'),
-            'penerbit' => $this->request->getVar('penerbit'),
+            'description' => $this->request->getVar('description'),
             'sampul' => $namaSampul,
         ]);
 
@@ -163,7 +175,7 @@ class Product extends BaseController
             'judul' => $this->request->getVar('judul'),
             'slug' => $slug,
             'price' => $this->request->getVar('price'),
-            'penerbit' => $this->request->getVar('penerbit'),
+            'description' => $this->request->getVar('description'),
             'sampul' => $namaSampul,
         ]);
 

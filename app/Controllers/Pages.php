@@ -17,7 +17,8 @@ class Pages extends BaseController
     {
         $data = [
             "title" => "Home | Auction",
-            "product" => $this->productModel->getProduct(),
+            "product" => $this->productModel->paginate(1, 'product'),
+            "pager" => $this->productModel->pager,
         ];
         return view("pages/home", $data);
     }

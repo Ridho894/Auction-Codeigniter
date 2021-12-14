@@ -8,7 +8,7 @@ class ProductModel extends Model
 {
     protected $table = "product";
     protected $useTimestamps = true;
-    protected $allowedFields = ['judul', 'slug', 'price', 'penerbit', 'sampul'];
+    protected $allowedFields = ['judul', 'slug', 'price', 'description', 'sampul'];
 
     public function getProduct($slug = false)
     {

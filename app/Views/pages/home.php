@@ -13,5 +13,6 @@
             </div>
         <?php endforeach; ?>
     </div>
+    <?= $pager->links('product', 'orang_pagination'); ?>
 </div>
 <?= $this->endSection(); ?>
