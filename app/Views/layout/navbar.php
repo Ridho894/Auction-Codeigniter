@@ -19,8 +19,12 @@
                     <a class="nav-link" href="/komik">Komik</a>
                 </li>
             </ul>
-            <button class="btn btn-primary" type="button">LOGIN</button>
-            <button class="btn btn-danger ml-3" type="button">REGISTER</button>
+            <?php if (logged_in()) : ?>
+                <a href="/logout" class="btn btn-danger" type="button">LOGOUT</a>
+            <?php else : ?>
+                <a href="/login" class="btn btn-primary" type="button">LOGIN</a>
+                <a href="/register" class="btn btn-danger ml-3" type="button">REGISTER</a>
+            <?php endif; ?>
         </div>
     </div>
 </nav>
