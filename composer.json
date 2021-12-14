@@ -4,6 +4,8 @@
     "description": "The CodeIgniter framework v4",
     "homepage": "https://codeigniter.com",
     "license": "MIT",
+    "minimum-stability": "beta",
+    "prefer-stable": true,
     "require": {
         "php": "^7.3 || ^8.0",
         "ext-curl": "*",
@@ -12,6 +14,7 @@
         "ext-mbstring": "*",
         "kint-php/kint": "^3.3",
         "laminas/laminas-escaper": "^2.9",
+        "myth/auth": "^1.0",
         "psr/log": "^1.1"
     },
     "require-dev": {
