@@ -8,7 +8,7 @@ class ProductModel extends Model
 {
     protected $table = "product";
     protected $useTimestamps = true;
-    protected $allowedFields = ['judul', 'slug', 'price', 'description', 'sampul'];
+    protected $allowedFields = ['judul', 'slug', 'price', 'description', 'sampul', 'address', 'created_by'];
 
     public function getProduct($slug = false)
     {
@@ -16,5 +16,9 @@ class ProductModel extends Model
             return $this->findAll();
         }
         return $this->where(['slug' => $slug])->first();
+    }
+    public function getProductById()
+    {
+        // return $this->where
     }
 }

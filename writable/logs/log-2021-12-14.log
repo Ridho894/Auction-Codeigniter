@@ -418,3 +418,98 @@ CRITICAL - 2021-12-14 10:07:42 --> Undefined variable $product
 #8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
 #10 {main}
+CRITICAL - 2021-12-14 18:29:38 --> Undefined variable $validation
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Views\pages\detail_product.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Asus\\D...', 47)
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(214): include('C:\\Users\\Asus\\D...')
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('pages/detail_pr...', Array, true)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(67): view('pages/detail_pr...', Array)
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->detailProduct('naruto')
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#10 {main}
+ERROR - 2021-12-14 20:52:50 --> Error connecting to the database: Unknown database 'latihancodeigniter'
+CRITICAL - 2021-12-14 20:52:50 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'latihancodeigniter'
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Database\BaseBuilder.php(1527): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Model.php(509): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\BaseModel.php(1084): CodeIgniter\Model->countAllResults(false)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(20): CodeIgniter\BaseModel->paginate(3, 'product')
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->index()
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#10 {main}
+CRITICAL - 2021-12-14 21:03:19 --> Invalid file: pages/contact.php
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages/contact.p...')
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('pages/contact', Array, true)
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(49): view('pages/contact', Array)
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->review()
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#8 {main}
+CRITICAL - 2021-12-14 15:39:34 --> Array callback must have exactly two elements
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(214): include()
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('product/index', Array, true)
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Product.php(21): view('product/index', Array)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Product->index()
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#9 {main}
+CRITICAL - 2021-12-14 15:45:22 --> Undefined variable $db
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Views\product\index.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Asus\\D...', 25)
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(214): include('C:\\Users\\Asus\\D...')
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('product/index', Array, true)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Product.php(21): view('product/index', Array)
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Product->index()
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#10 {main}
+CRITICAL - 2021-12-14 15:47:44 --> Undefined variable $db
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Views\product\index.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Asus\\D...', 25)
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(214): include('C:\\Users\\Asus\\D...')
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('product/index', Array, true)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Product.php(21): view('product/index', Array)
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Product->index()
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#10 {main}
+CRITICAL - 2021-12-14 23:18:35 --> Undefined variable $validation
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Views\pages\detail_product.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Asus\\D...', 48)
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(214): include('C:\\Users\\Asus\\D...')
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('pages/detail_pr...', Array, true)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(67): view('pages/detail_pr...', Array)
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->detailProduct('one-piece')
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#10 {main}
+CRITICAL - 2021-12-14 23:20:09 --> Undefined variable $validation
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Views\pages\detail_product.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Asus\\D...', 48)
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(214): include('C:\\Users\\Asus\\D...')
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('pages/detail_pr...', Array, true)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(57): view('pages/detail_pr...', Array)
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->detailProduct('one-piece')
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#10 {main}
