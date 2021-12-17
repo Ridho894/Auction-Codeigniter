@@ -18,9 +18,15 @@ class Pages extends BaseController
 
     public function index()
     {
+        $search = $this->request->getVar('search');
+        if ($search) {
+            $product = $this->productModel->search($search);
+        } else {
+            $product = $this->productModel;
+        }
         $data = [
             "title" => "Home",
-            "product" => $this->productModel->paginate(3, 'product'),
+            "product" => $product->paginate(3, 'product'),
             "pager" => $this->productModel->pager,
         ];
         return view("pages/home", $data);

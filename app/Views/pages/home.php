@@ -1,7 +1,13 @@
 <?= $this->extend("layout/template"); ?>
 <?= $this->section("content"); ?>
 <div class="container">
-    <div class="" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+    <form action="" method="POST">
+        <div class="input-group mt-3">
+            <input type="text" class="form-control" placeholder="Search product..." name="search">
+            <button class="btn btn-outline-secondary" type="submit" name="submit">Search</button>
+        </div>
+    </form>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
         <?php foreach ($product as $k) : ?>
             <div class="card mt-3 mb-2" style="width: 20rem;">
                 <img class="card-img-top" src="/img/<?= $k["sampul"]; ?>" alt="Card image cap">

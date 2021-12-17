@@ -73,3 +73,10 @@ CRITICAL - 2021-12-16 20:45:56 --> Call to undefined method App\Models\ProductMo
 #4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
 #6 {main}
+CRITICAL - 2021-12-16 21:14:47 --> Call to a member function paginate() on null
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->index()
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#5 {main}

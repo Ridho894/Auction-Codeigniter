@@ -21,4 +21,11 @@ class ProductModel extends Model
         $query = $builder->getWhere(['created_by' => 'admin']);
         return $query;
     }
+    public function search($search)
+    {
+        // $builder = $this->table('product');
+        // $builder->like('judul', $search);
+        // return $builder;
+        return $this->table('product')->like('judul', $search);
+    }
 }

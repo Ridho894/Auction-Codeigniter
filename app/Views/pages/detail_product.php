@@ -27,8 +27,8 @@
                         </dd>
                     </dl>
                     <dl class="param param-feature">
-                        <dt>Model#</dt>
-                        <dd>12345611</dd>
+                        <dt>Created By</dt>
+                        <dd><?= $product['created_by']; ?></dd>
                     </dl> <!-- item-property-hor .// -->
                     <dl class="param param-feature">
                         <dt>Published</dt>
