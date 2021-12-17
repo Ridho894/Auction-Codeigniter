@@ -98,3 +98,205 @@ CRITICAL - 2021-12-15 22:31:30 --> Undefined variable $product
 #8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
 #10 {main}
+CRITICAL - 2021-12-15 22:54:12 --> foreach() argument must be of type array|object, null given
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Views\pages\profile.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\Users\\Asus\\D...', 144)
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(214): include('C:\\Users\\Asus\\D...')
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('pages/profile', Array, true)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(79): view('pages/profile', Array)
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->profile()
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#10 {main}
+CRITICAL - 2021-12-15 22:55:04 --> Trying to access array offset on value of type null
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Views\pages\profile.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\Users\\Asus\\D...', 147)
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(214): include('C:\\Users\\Asus\\D...')
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('pages/profile', Array, true)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(79): view('pages/profile', Array)
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->profile()
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#10 {main}
+CRITICAL - 2021-12-15 22:55:53 --> Undefined variable $product
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Views\pages\profile.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Asus\\D...', 144)
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(214): include('C:\\Users\\Asus\\D...')
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('pages/profile', Array, true)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(79): view('pages/profile', Array)
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->profile()
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#10 {main}
+CRITICAL - 2021-12-15 22:56:40 --> Trying to access array offset on value of type null
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Views\pages\profile.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\Users\\Asus\\D...', 147)
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(214): include('C:\\Users\\Asus\\D...')
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('pages/profile', Array, true)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(79): view('pages/profile', Array)
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->profile()
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#10 {main}
+CRITICAL - 2021-12-15 22:56:48 --> Too few arguments to function App\Models\ProductModel::getProductByIdUser(), 0 passed in C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php on line 77 and exactly 1 expected
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(77): App\Models\ProductModel->getProductByIdUser()
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->profile()
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#6 {main}
+CRITICAL - 2021-12-15 22:57:56 --> foreach() argument must be of type array|object, null given
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Views\pages\profile.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\Users\\Asus\\D...', 144)
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(214): include('C:\\Users\\Asus\\D...')
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('pages/profile', Array, true)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(79): view('pages/profile', Array)
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->profile()
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#10 {main}
+CRITICAL - 2021-12-15 23:04:40 --> Cannot use object of type mysqli as array
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(214): include()
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('pages/profile', Array, true)
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(79): view('pages/profile', Array)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->profile()
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#9 {main}
+ERROR - 2021-12-15 23:36:40 --> Unknown column 'ridho1453' in 'where clause'
+CRITICAL - 2021-12-15 23:36:40 --> Unknown column 'ridho1453' in 'where clause'
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM p...', 0)
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM p...')
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM p...')
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(77): CodeIgniter\Database\BaseConnection->query('SELECT * FROM p...')
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->profile()
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#9 {main}
+ERROR - 2021-12-15 23:36:54 --> Unknown column 'admin' in 'where clause'
+CRITICAL - 2021-12-15 23:36:54 --> Unknown column 'admin' in 'where clause'
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM p...', 0)
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM p...')
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM p...')
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(77): CodeIgniter\Database\BaseConnection->query('SELECT * FROM p...')
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->profile()
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#9 {main}
+CRITICAL - 2021-12-15 23:53:38 --> Cannot use object of type mysqli as array
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(214): include()
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('pages/profile', Array, true)
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(83): view('pages/profile', Array, Array)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->profile()
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#9 {main}
+CRITICAL - 2021-12-15 23:53:43 --> Call to undefined method App\Models\ProductModel::getProductByIdUser
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(81): CodeIgniter\Model->__call('getProductByIdU...', Array)
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->profile()
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#6 {main}
+CRITICAL - 2021-12-15 23:53:58 --> Call to undefined method App\Models\ProductModel::getProductByIdUser
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(81): CodeIgniter\Model->__call('getProductByIdU...', Array)
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->profile()
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#6 {main}
+CRITICAL - 2021-12-15 23:54:14 --> Undefined variable $product
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Views\pages\profile.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Asus\\D...', 144)
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(214): include('C:\\Users\\Asus\\D...')
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('pages/profile', Array, true)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(82): view('pages/profile', Array, Array)
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->profile()
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#10 {main}
+CRITICAL - 2021-12-15 23:55:09 --> Undefined variable $results
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Views\pages\profile.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Asus\\D...', 144)
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(214): include('C:\\Users\\Asus\\D...')
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('pages/profile', Array, true)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(83): view('pages/profile', Array, Array)
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->profile()
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#10 {main}
+CRITICAL - 2021-12-15 23:55:34 --> Cannot use object of type stdClass as array
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(214): include()
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('pages/profile', Array, true)
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(83): view('pages/profile', Array)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->profile()
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#9 {main}
+CRITICAL - 2021-12-15 23:55:40 --> Cannot use object of type stdClass as array
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(214): include()
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('pages/profile', Array, true)
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(83): view('pages/profile', Array, Array)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->profile()
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#9 {main}
+CRITICAL - 2021-12-15 23:56:55 --> Cannot use object of type stdClass as array
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(214): include()
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('pages/profile', Array, true)
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(84): view('pages/profile', Array)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->profile()
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#9 {main}
+CRITICAL - 2021-12-15 23:58:14 --> Undefined array key "sampul"
+#0 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Views\pages\profile.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\Asus\\D...', 3)
+#1 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(214): include('C:\\Users\\Asus\\D...')
+#2 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('pages/profile', Array, true)
+#4 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\app\Controllers\Pages.php(84): view('pages/profile', Array)
+#5 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(824): App\Controllers\Pages->profile()
+#6 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Asus\Documents\GitHub\Latihan-codeigniter\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Asus\\D...')
+#10 {main}
+CRITICAL - 2021-12-15 23:58:17 --> Cannot use [] for reading
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

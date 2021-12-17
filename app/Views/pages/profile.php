@@ -1,5 +1,6 @@
 <?= $this->extend("layout/template"); ?>
 <?= $this->section("content"); ?>
+
 <div class="container">
     <div class="main-body">
         <div class="row gutters-sm mt-3">
@@ -134,19 +135,24 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Sampul</th>
+                                        <th scope="col">Picture</th>
                                         <th scope="col">Judul</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php $i = 1; ?>
-                                    <?php foreach ($product as $k) : ?>
+                                    <?php
+                                    $db = \Config\Database::connect();
+                                    $user = user()->username;
+                                    $query = $db->query("SELECT * FROM product WHERE created_by = '$user'");
+                                    foreach ($query->getResult() as $row) :
+                                    ?>
                                         <tr>
                                             <th scope="row"><?= $i++; ?></th>
-                                            <td><img src="/img/<?= $k["sampul"]; ?>" alt="" class="sampul"></td>
-                                            <td><?= $k["judul"]; ?></td>
-                                            <td><a href="/product/<?= $k['slug']; ?>" class="btn btn-success">Detail</a></td>
+                                            <td><img src="/img/<?= $row->sampul; ?>" alt="" class="sampul"></td>
+                                            <td><?= $row->judul ?></td>
+                                            <td><a href="/product/<?= $row->slug ?>" class="btn btn-success">Detail</a></td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>

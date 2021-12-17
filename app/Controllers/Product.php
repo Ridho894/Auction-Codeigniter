@@ -74,7 +74,7 @@ class Product extends BaseController
         ])) {
             // $validation = \Config\Services::validation();
             // return redirect()->to('/komik/create')->withInput()->with('validation', $validation);
-            return redirect()->to('/product/create')->withInput();
+            return redirect()->to('/pages/profile')->withInput();
         }
         // Ambil Gambar
         $fileSampul = $this->request->getFile('sampul');
@@ -102,7 +102,7 @@ class Product extends BaseController
 
         session()->setFlashdata('pesan', 'Data Berhasil Ditambahkan.');
 
-        return redirect()->to('/product');
+        return redirect()->to('/pages/profile');
     }
     public function delete($id)
     {
@@ -182,6 +182,6 @@ class Product extends BaseController
 
         session()->setFlashdata('pesan', 'Data Berhasil Diubah.');
 
-        return redirect()->to('/product');
+        return redirect()->to('/pages/profile');
     }
 }

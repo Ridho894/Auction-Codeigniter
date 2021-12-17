@@ -7,8 +7,6 @@ use CodeIgniter\Model;
 class ProductModel extends Model
 {
     protected $table = "product";
-    protected $useTimestamps = true;
-    protected $allowedFields = ['judul', 'slug', 'price', 'description', 'sampul', 'address', 'created_by'];
 
     public function getProduct($slug = false)
     {
@@ -17,8 +15,10 @@ class ProductModel extends Model
         }
         return $this->where(['slug' => $slug])->first();
     }
-    public function getProductById()
+    public function getProductByIdUser()
     {
-        // return $this->where
+        $builder = $this->db->table('product');
+        $query = $builder->getWhere(['created_by' => 'admin']);
+        return $query;
     }
 }

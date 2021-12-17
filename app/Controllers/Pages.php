@@ -3,14 +3,17 @@
 namespace App\Controllers;
 
 use App\Models\ProductModel;
+use App\Models\ReviewModel;
 
 class Pages extends BaseController
 {
     protected $productModel;
+    protected $reviewModel;
 
     public function __construct()
     {
         $this->productModel = new ProductModel();
+        $this->reviewModel = new ReviewModel();
     }
 
     public function index()
@@ -33,18 +36,7 @@ class Pages extends BaseController
     {
         $data = [
             "title" => "Review",
-            "Alamat" => [
-                [
-                    "tipe" => "Rumah",
-                    "jalan" => "Gito Gati",
-                    "kota" => "Sleman"
-                ],
-                [
-                    "tipe" => "Kantor",
-                    "jalan" => "Palagan",
-                    "kota" => "Sleman"
-                ]
-            ]
+            "review" => $this->reviewModel->getReview()
         ];
         return view("pages/review", $data);
     }
@@ -72,6 +64,12 @@ class Pages extends BaseController
     }
     public function profile()
     {
+        $db = \Config\Database::connect();
+        $user = user()->username;
+        $query = $db->query("SELECT * FROM product WHERE created_by = '$user'");
+        // foreach ($query->getResult() as $row) {
+        //     echo $row->judul;
+        // }
         $data = [
             "title" => "Profile",
             "product" => $this->productModel->getProduct(),
