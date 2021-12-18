@@ -16,10 +16,7 @@
                     <a class="nav-link" href="/pages/contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/komik">Komik</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/orang">Orang</a>
+                    <a class="nav-link" href="/product">Product</a>
                 </li>
             </ul>
             <?php if (logged_in()) : ?>

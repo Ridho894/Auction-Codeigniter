@@ -35,7 +35,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => '',
         'password' => '',
-        'database' => '',
+        'database' => 'codeigniter_auction',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,

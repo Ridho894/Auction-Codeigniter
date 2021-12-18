@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-<<<<<<< HEAD
 use App\Models\ProductModel;
 use App\Models\ReviewModel;
 
@@ -17,29 +16,13 @@ class Pages extends BaseController
         $this->reviewModel = new ReviewModel();
     }
 
-=======
-class Pages extends BaseController
-{
->>>>>>> parent of c2983ff (migrasi ke final project yaitu lelang)
     public function index()
     {
         $data = [
-<<<<<<< HEAD
-<<<<<<< HEAD
+            // "product" => $product->paginate(3, 'product'),
             "title" => "Home",
-<<<<<<< HEAD
-            "product" => $product->paginate(3, 'product'),
-=======
-            "title" => "Home | Auction",
-            "product" => $this->productModel->paginate(1, 'product'),
->>>>>>> parent of 58a0f7f (user-profile dll)
-=======
             "product" => $this->productModel->paginate(3, 'product'),
->>>>>>> parent of b7cf154 (search product)
-            "pager" => $this->productModel->pager,
-=======
             "title" => "Home | CodeIgniter"
->>>>>>> parent of c2983ff (migrasi ke final project yaitu lelang)
         ];
         return view("pages/home", $data);
     }
@@ -53,15 +36,9 @@ class Pages extends BaseController
     public function contact()
     {
         $data = [
-<<<<<<< HEAD
-<<<<<<< HEAD
             "title" => "Review",
-            "review" => $this->reviewModel->getReview()
-=======
+            "review" => $this->reviewModel->getReview(),
             "title" => "Contact Us | Auction",
-=======
-            "title" => "Contact Us | CodeIgniter",
->>>>>>> parent of c2983ff (migrasi ke final project yaitu lelang)
             "Alamat" => [
                 [
                     "tipe" => "Rumah",
@@ -74,11 +51,9 @@ class Pages extends BaseController
                     "kota" => "Sleman"
                 ]
             ]
->>>>>>> parent of 58a0f7f (user-profile dll)
         ];
         return view("pages/contact", $data);
     }
-<<<<<<< HEAD
     public function detailProduct($slug)
     {
         $data = [
@@ -87,7 +62,6 @@ class Pages extends BaseController
         ];
         return view('pages/detail_product', $data);
     }
-<<<<<<< HEAD
     public function bidProduct()
     {
         if (!$this->validate([
@@ -115,8 +89,4 @@ class Pages extends BaseController
         ];
         return view('pages/profile', $data);
     }
-=======
->>>>>>> parent of 58a0f7f (user-profile dll)
-=======
->>>>>>> parent of c2983ff (migrasi ke final project yaitu lelang)
 }
