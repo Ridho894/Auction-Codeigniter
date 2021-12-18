@@ -23,7 +23,9 @@
                     <dl class="item-property">
                         <dt>Description</dt>
                         <dd>
-                            <p><?= $product['description']; ?></p>
+                            <p>Here goes description consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco </p>
                         </dd>
                     </dl>
                     <dl class="param param-feature">
@@ -31,27 +33,18 @@
                         <dd><?= $product['created_by']; ?></dd>
                     </dl> <!-- item-property-hor .// -->
                     <dl class="param param-feature">
-                        <dt>Published</dt>
-                        <dd>
-                            <p><?= $product['created_at']; ?></p>
-                        </dd>
+                        <dt>Color</dt>
+                        <dd>Black and white</dd>
                     </dl> <!-- item-property-hor .// -->
                     <dl class="param param-feature">
-                        <dt>Address</dt>
-                        <dd>
-                            <p><?= $product['address']; ?></p>
-                        </dd>
+                        <dt>Delivery</dt>
+                        <dd>Russia, USA, and Europe</dd>
                     </dl> <!-- item-property-hor .// -->
                     <hr>
-                    <form action="/pages/bidProduct" method="POST">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control  <?= ($validation->hasError('bid')) ? 'is-invalid' : ''; ?>" placeholder="place your bid" aria-label="Recipient's username" aria-describedby="button-addon2">
-                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">BID</button>
-                        </div>
-                        <div class="invalid-feedback">
-                            <?= $validation->getError('bid'); ?>
-                        </div>
-                    </form>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="place your bid" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">BID</button>
+                    </div>
                 </article> <!-- card-body.// -->
             </aside> <!-- col.// -->
         </div> <!-- row.// -->

@@ -8,7 +8,7 @@ class ProductModel extends Model
 {
     protected $table = "product";
     protected $useTimestamps = true;
-    protected $allowedFields = ['judul', 'slug', 'price', 'description', 'sampul', 'address', 'created_by'];
+    protected $allowedFields = ['judul', 'slug', 'price', 'description', 'sampul'];
 
     public function getProduct($slug = false)
     {
@@ -17,6 +17,7 @@ class ProductModel extends Model
         }
         return $this->where(['slug' => $slug])->first();
     }
+<<<<<<< HEAD
     public function getProductByIdUser()
     {
         $builder = $this->db->table('product');
@@ -30,4 +31,6 @@ class ProductModel extends Model
         // return $builder;
         return $this->table('product')->like('judul', $search);
     }
+=======
+>>>>>>> parent of 58a0f7f (user-profile dll)
 }

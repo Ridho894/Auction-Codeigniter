@@ -25,8 +25,13 @@ class Pages extends BaseController
             $product = $this->productModel;
         }
         $data = [
+<<<<<<< HEAD
             "title" => "Home",
             "product" => $product->paginate(3, 'product'),
+=======
+            "title" => "Home | Auction",
+            "product" => $this->productModel->paginate(1, 'product'),
+>>>>>>> parent of 58a0f7f (user-profile dll)
             "pager" => $this->productModel->pager,
         ];
         return view("pages/home", $data);
@@ -34,27 +39,43 @@ class Pages extends BaseController
     public function about()
     {
         $data = [
-            "title" => "About"
+            "title" => "About | Auction"
         ];
         return view("pages/about", $data);
     }
-    public function review()
+    public function contact()
     {
         $data = [
+<<<<<<< HEAD
             "title" => "Review",
             "review" => $this->reviewModel->getReview()
+=======
+            "title" => "Contact Us | Auction",
+            "Alamat" => [
+                [
+                    "tipe" => "Rumah",
+                    "jalan" => "Gito Gati",
+                    "kota" => "Sleman"
+                ],
+                [
+                    "tipe" => "Kantor",
+                    "jalan" => "Palagan",
+                    "kota" => "Sleman"
+                ]
+            ]
+>>>>>>> parent of 58a0f7f (user-profile dll)
         ];
-        return view("pages/review", $data);
+        return view("pages/contact", $data);
     }
     public function detailProduct($slug)
     {
         $data = [
-            "title" => "Details",
+            "title" => "Details | Auction",
             "product" => $this->productModel->getProduct($slug),
-            "validation" => \Config\Services::validation(),
         ];
         return view('pages/detail_product', $data);
     }
+<<<<<<< HEAD
     public function bidProduct()
     {
         if (!$this->validate([
@@ -82,4 +103,6 @@ class Pages extends BaseController
         ];
         return view('pages/profile', $data);
     }
+=======
+>>>>>>> parent of 58a0f7f (user-profile dll)
 }

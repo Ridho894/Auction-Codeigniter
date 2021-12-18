@@ -96,7 +96,6 @@ class Product extends BaseController
             'slug' => $slug,
             'price' => $this->request->getVar('price'),
             'description' => $this->request->getVar('description'),
-            'created_by' => $this->request->getVar('created_by'),
             'sampul' => $namaSampul,
         ]);
 
