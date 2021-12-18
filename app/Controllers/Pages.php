@@ -23,21 +23,19 @@ class Pages extends BaseController
 >>>>>>> parent of c2983ff (migrasi ke final project yaitu lelang)
     public function index()
     {
-        $search = $this->request->getVar('search');
-        if ($search) {
-            $product = $this->productModel->search($search);
-        } else {
-            $product = $this->productModel;
-        }
         $data = [
 <<<<<<< HEAD
 <<<<<<< HEAD
             "title" => "Home",
+<<<<<<< HEAD
             "product" => $product->paginate(3, 'product'),
 =======
             "title" => "Home | Auction",
             "product" => $this->productModel->paginate(1, 'product'),
 >>>>>>> parent of 58a0f7f (user-profile dll)
+=======
+            "product" => $this->productModel->paginate(3, 'product'),
+>>>>>>> parent of b7cf154 (search product)
             "pager" => $this->productModel->pager,
 =======
             "title" => "Home | CodeIgniter"

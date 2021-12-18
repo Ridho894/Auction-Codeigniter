@@ -28,6 +28,7 @@ class KomikModel extends Model
         $query = $builder->getWhere(['created_by' => 'admin']);
         return $query;
     }
+<<<<<<< HEAD:app/Models/KomikModel.php
     public function search($search)
     {
         // $builder = $this->table('product');
@@ -37,4 +38,6 @@ class KomikModel extends Model
     }
 =======
 >>>>>>> parent of 58a0f7f (user-profile dll)
+=======
+>>>>>>> parent of b7cf154 (search product):app/Models/ProductModel.php
 }

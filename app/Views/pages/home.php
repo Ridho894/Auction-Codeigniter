@@ -2,6 +2,7 @@
 <?= $this->section("content"); ?>
 <div class="container">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <form action="" method="POST">
         <div class="input-group mt-3">
             <input type="text" class="form-control" placeholder="Search product..." name="search">
@@ -9,6 +10,9 @@
         </div>
     </form>
     <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+=======
+    <div class="" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+>>>>>>> parent of b7cf154 (search product)
         <?php foreach ($product as $k) : ?>
             <div class="card mt-3 mb-2" style="width: 20rem;">
                 <img class="card-img-top" src="/img/<?= $k["sampul"]; ?>" alt="Card image cap">

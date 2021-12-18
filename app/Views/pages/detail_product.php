@@ -29,8 +29,8 @@
                         </dd>
                     </dl>
                     <dl class="param param-feature">
-                        <dt>Created By</dt>
-                        <dd><?= $product['created_by']; ?></dd>
+                        <dt>Model#</dt>
+                        <dd>12345611</dd>
                     </dl> <!-- item-property-hor .// -->
                     <dl class="param param-feature">
                         <dt>Color</dt>
