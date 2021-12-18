@@ -7,6 +7,8 @@ use CodeIgniter\Model;
 class ProductModel extends Model
 {
     protected $table = "product";
+    protected $useTimestamps = true;
+    protected $allowedFields = ['judul', 'slug', 'price', 'description', 'sampul', 'address', 'created_by'];
 
     public function getProduct($slug = false)
     {
