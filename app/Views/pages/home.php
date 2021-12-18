@@ -1,6 +1,7 @@
 <?= $this->extend("layout/template"); ?>
 <?= $this->section("content"); ?>
 <div class="container">
+<<<<<<< HEAD
     <form action="" method="POST">
         <div class="input-group mt-3">
             <input type="text" class="form-control" placeholder="Search product..." name="search">
@@ -18,6 +19,12 @@
                 </div>
             </div>
         <?php endforeach; ?>
+=======
+    <div class="row">
+        <div class="col">
+            <h1>Hello, Home</h1>
+        </div>
+>>>>>>> parent of c2983ff (migrasi ke final project yaitu lelang)
     </div>
     <?= $pager->links('product', 'orang_pagination'); ?>
 </div>
