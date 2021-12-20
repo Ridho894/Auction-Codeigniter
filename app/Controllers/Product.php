@@ -112,7 +112,7 @@ class Product extends BaseController
         // Cek Jika file gambar default
         if ($product['sampul'] != 'default.jpg') {
             // Hapus Gambar
-            // unlink('img/' . $product['sampul']);
+            unlink('img/' . $product['sampul']);
             $this->productModel->delete($id);
         } else {
             $this->productModel->delete($id);
@@ -160,6 +160,7 @@ class Product extends BaseController
         }
 
         $fileSampul = $this->request->getFile('sampul');
+        $defaultSampul = $this->request->getVar('sampulLama');
         // Cek gambar, apakah tetap gambar lama
         if ($fileSampul->getError() == 4) {
             $namaSampul = $this->request->getVar('sampulLama');
@@ -169,7 +170,10 @@ class Product extends BaseController
             // Pindahkan gambar
             $fileSampul->move('img', $namaSampul);
             // Hapus file lama
-            unlink('img/' . $this->request->getVar('sampulLama'));
+            if ($defaultSampul != 'default.jpg') {
+                unlink('img/' . $this->request->getVar('sampulLama'));
+            } else {
+            }
         }
 
         $slug = url_title($this->request->getVar('judul'), '-', true);
