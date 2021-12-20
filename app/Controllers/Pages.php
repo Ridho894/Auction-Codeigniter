@@ -18,27 +18,32 @@ class Pages extends BaseController
 
     public function index()
     {
+        $search = $this->request->getVar('search');
+        if ($search) {
+            $product = $this->productModel->search($search);
+        } else {
+            $product = $this->productModel;
+        }
+        // dd($search);
         $data = [
-            // "product" => $product->paginate(3, 'product'),
             "title" => "Home",
-            "product" => $this->productModel->paginate(3, 'product'),
-            "title" => "Home | CodeIgniter"
+            "product" => $product->paginate(3, 'product'),
+            "pager" => $this->productModel->pager,
         ];
         return view("pages/home", $data);
     }
     public function about()
     {
         $data = [
-            "title" => "About | CodeIgniter"
+            "title" => "About"
         ];
         return view("pages/about", $data);
     }
-    public function contact()
+    public function review()
     {
         $data = [
             "title" => "Review",
             "review" => $this->reviewModel->getReview(),
-            "title" => "Contact Us | Auction",
             "Alamat" => [
                 [
                     "tipe" => "Rumah",
@@ -52,12 +57,12 @@ class Pages extends BaseController
                 ]
             ]
         ];
-        return view("pages/contact", $data);
+        return view("pages/review", $data);
     }
     public function detailProduct($slug)
     {
         $data = [
-            "title" => "Details | Auction",
+            "title" => "Details",
             "product" => $this->productModel->getProduct($slug),
         ];
         return view('pages/detail_product', $data);

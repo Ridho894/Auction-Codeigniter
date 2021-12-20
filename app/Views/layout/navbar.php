@@ -6,21 +6,18 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item <?= $title === "Home" ? 'active' : ''; ?>">
                     <a class="nav-link" href="/">Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item <?= $title === "About" ? 'active' : ''; ?>">
                     <a class="nav-link" href="/pages/about">About</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/pages/contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/product">Product</a>
+                <li class="nav-item <?= $title === "Review" ? 'active' : ''; ?>">
+                    <a class="nav-link" href="/pages/review">Review</a>
                 </li>
             </ul>
             <?php if (logged_in()) : ?>
-                <a href="/logout" class="btn btn-danger" type="button">LOGOUT</a>
+                <a href="/pages/profile" class="nav-link" type="button">My Profile</a>
             <?php else : ?>
                 <a href="/login" class="btn btn-primary" type="button">LOGIN</a>
                 <a href="/register" class="btn btn-danger ml-3" type="button">REGISTER</a>

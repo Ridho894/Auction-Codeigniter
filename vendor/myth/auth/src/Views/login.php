@@ -52,6 +52,7 @@
 						<br>
 
 						<button type="submit" class="btn btn-primary btn-block"><?= lang('Auth.loginAction') ?></button>
+						<a href="/pages/index" class="btn btn-warning btn-block" style="color: white;">Skip for now</a>
 					</form>
 
 					<hr>
