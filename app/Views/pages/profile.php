@@ -142,17 +142,12 @@
                                 </thead>
                                 <tbody>
                                     <?php $i = 1; ?>
-                                    <?php
-                                    $db = \Config\Database::connect();
-                                    $user = user()->username;
-                                    $query = $db->query("SELECT * FROM product WHERE created_by = '$user'");
-                                    foreach ($query->getResult() as $row) :
-                                    ?>
+                                    <?php foreach ($product as $p) : ?>
                                         <tr>
                                             <th scope="row"><?= $i++; ?></th>
-                                            <td><img src="/img/<?= $row->sampul; ?>" alt="" class="sampul"></td>
-                                            <td><?= $row->judul ?></td>
-                                            <td><a href="/product/<?= $row->slug ?>" class="btn btn-success">Detail</a></td>
+                                            <td><img src="/img/<?= $p['sampul']; ?>" alt="" class="sampul"></td>
+                                            <td><?= $p['judul'] ?></td>
+                                            <td><a href="/product/<?= $p['slug'] ?>" class="btn btn-success">Detail</a></td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>

@@ -84,13 +84,11 @@ class Pages extends BaseController
     {
         $db = \Config\Database::connect();
         $user = user()->username;
-        $query = $db->query("SELECT * FROM product WHERE created_by = '$user'");
-        // foreach ($query->getResult() as $row) {
-        //     echo $row->judul;
-        // }
+        $builder = $db->table('product');
         $data = [
             "title" => "Profile",
-            "product" => $this->productModel->getProduct(),
+            // "product" => $builder->where('created_by', $user),
+            "product" => $this->productModel->getProductById($user)
         ];
         return view('pages/profile', $data);
     }

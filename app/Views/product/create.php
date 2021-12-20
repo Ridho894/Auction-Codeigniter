@@ -7,6 +7,7 @@
             <h2 class="my-3">Form Tambah Product</h2>
             <form method="POST" action="/product/save" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
+                <input type="hidden" name="created_by" value="<?= user()->username; ?>">
                 <div class="form-group row">
                     <label for="judul" class="col-sm-2 col-form-label">Judul</label>
                     <div class="col-sm-10">
@@ -17,9 +18,9 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="price" class="col-sm-2 col-form-label">Penulis</label>
+                    <label for="price" class="col-sm-2 col-form-label">Price</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control <?= ($validation->hasError('price')) ? 'is-invalid' : ''; ?>" id="price" name="price" value="<?= old('price'); ?>">
+                        <input type="number" class="form-control <?= ($validation->hasError('price')) ? 'is-invalid' : ''; ?>" id="price" name="price" value="<?= old('price'); ?>">
                         <div class="invalid-feedback">
                             <?= $validation->getError('price'); ?>
                         </div>

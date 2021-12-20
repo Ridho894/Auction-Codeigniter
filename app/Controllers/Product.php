@@ -97,6 +97,7 @@ class Product extends BaseController
             'slug' => $slug,
             'price' => $this->request->getVar('price'),
             'description' => $this->request->getVar('description'),
+            'created_by' => $this->request->getVar('created_by'),
             'sampul' => $namaSampul,
         ]);
 
@@ -117,7 +118,7 @@ class Product extends BaseController
             $this->productModel->delete($id);
         }
         session()->setFlashdata('pesan', 'Data Berhasil Dihapus.');
-        return redirect()->to('/product');
+        return redirect()->to('/pages/profile');
     }
     public function edit($slug)
     {
