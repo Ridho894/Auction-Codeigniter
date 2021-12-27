@@ -142,14 +142,24 @@
                                 </thead>
                                 <tbody>
                                     <?php $i = 1; ?>
-                                    <?php foreach ($product as $p) : ?>
+                                    <?php
+                                    if (!$product) : ?>
                                         <tr>
-                                            <th scope="row"><?= $i++; ?></th>
-                                            <td><img src="/img/<?= $p['sampul']; ?>" alt="" class="sampul"></td>
-                                            <td><?= $p['judul'] ?></td>
-                                            <td><a href="/product/<?= $p['slug'] ?>" class="btn btn-success">Detail</a></td>
+                                            <th scope="row" colspan="4">
+                                                <img src="/img/no-product.png" alt="" width="100%">
+                                                <h4 style="text-align: center;font-style: italic;">No Product</h4>
+                                            </th>
                                         </tr>
-                                    <?php endforeach; ?>
+                                    <?php elseif ($product) : ?>
+                                        <?php foreach ($product as $p) : ?>
+                                            <tr>
+                                                <th scope="row"><?= $i++; ?></th>
+                                                <td><img src="/img/<?= $p['sampul']; ?>" alt="" class="sampul"></td>
+                                                <td><?= $p['judul'] ?></td>
+                                                <td><a href="/product/<?= $p['slug'] ?>" class="btn btn-success">Detail</a></td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
                                 </tbody>
                             </table>
                         </div>

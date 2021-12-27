@@ -27,7 +27,7 @@ class Pages extends BaseController
         // dd($search);
         $data = [
             "title" => "Home",
-            "product" => $product->paginate(3, 'product'),
+            "product" => $product->paginate(9, 'product'),
             "pager" => $this->productModel->pager,
         ];
         return view("pages/home", $data);
@@ -61,9 +61,16 @@ class Pages extends BaseController
     }
     public function detailProduct($slug)
     {
+
+        $harga = $this->productModel->getProduct($slug);
+        $bid = $this->request->getVar('bid');
+        if ($bid >= $harga['price']) {
+            return view('welcome_message');
+        }
         $data = [
             "title" => "Details",
             "product" => $this->productModel->getProduct($slug),
+            "validation" => \Config\Services::validation(),
         ];
         return view('pages/detail_product', $data);
     }
@@ -82,9 +89,7 @@ class Pages extends BaseController
     }
     public function profile()
     {
-        $db = \Config\Database::connect();
         $user = user()->username;
-        $builder = $db->table('product');
         $data = [
             "title" => "Profile",
             // "product" => $builder->where('created_by', $user),
