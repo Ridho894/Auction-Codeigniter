@@ -24,7 +24,7 @@ class Product extends BaseController
     public function detail($slug)
     {
         $data = [
-            "title" => "Detail product",
+            "title" => "Detail Product",
             "product" => $this->productModel->getproduct($slug),
         ];
         if (empty($data['product'])) {
@@ -36,7 +36,7 @@ class Product extends BaseController
     {
         session();
         $data = [
-            "title" => "Form Tambah Data product",
+            "title" => "Add Product",
             "validation" => \Config\Services::validation(),
         ];
         return view('product/create', $data);
@@ -59,6 +59,12 @@ class Product extends BaseController
                 ]
             ],
             'description' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+            'address' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => '{field} harus diisi',
@@ -125,7 +131,7 @@ class Product extends BaseController
     {
         session();
         $data = [
-            "title" => "Form Ubah Data product",
+            "title" => "Edit Product",
             "validation" => \Config\Services::validation(),
             'product' => $this->productModel->getproduct($slug),
         ];

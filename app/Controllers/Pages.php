@@ -27,7 +27,7 @@ class Pages extends BaseController
         // dd($search);
         $data = [
             "title" => "Home",
-            "product" => $product->paginate(9, 'product'),
+            "product" => $product->paginate(6, 'product'),
             "pager" => $this->productModel->pager,
         ];
         return view("pages/home", $data);
@@ -61,7 +61,6 @@ class Pages extends BaseController
     }
     public function detailProduct($slug)
     {
-
         $harga = $this->productModel->getProduct($slug);
         $bid = $this->request->getVar('bid');
         if ($bid >= $harga['price']) {
