@@ -1,5 +1,19 @@
 <?= $this->extend("layout/template"); ?>
 <?= $this->section("content"); ?>
+<?php if (session()->getFlashdata('pesan')) : ?>
+    <div class="position-fixed top-0 left-0 p-3 bg-white shadow" style="z-index: 25; right: 20px; top: 20px;">
+        <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-delay="2000">
+            <div class="toast-header">
+                <div src="..." class="rounded mr-2" alt="..."></div>
+                <strong class="mr-auto">Auction</strong>
+                <small>Now</small>
+            </div>
+            <div class="toast-body">
+                <?= session()->getFlashdata('pesan'); ?>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>
 <div class="container">
     <form action="" method="POST">
         <div class="input-group mt-3">
@@ -20,4 +34,5 @@
         <?php endforeach; ?>
     </div>
     <?= $pager->links('product', 'orang_pagination'); ?>
-    <?= $this->endSection(); ?>
+</div>
+<?= $this->endSection(); ?>

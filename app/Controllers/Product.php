@@ -130,6 +130,7 @@ class Product extends BaseController
     public function edit($slug)
     {
         session();
+        dd($slug);
         $data = [
             "title" => "Edit Product",
             "validation" => \Config\Services::validation(),

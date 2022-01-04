@@ -37,6 +37,8 @@ $routes->get('/product/edit/(:segment)', 'Product::edit/$1');
 $routes->delete('/product/(:num)', 'Product::delete/$1');
 $routes->get('/product/(:any)', 'Product::detail/$1');
 $routes->get('/pages/detail_product/(:any)', 'Pages::detailProduct/$1');
+$routes->get('/pages/edit/(:segment)', 'Pages::edit/$1');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -44,10 +44,10 @@
                         <dd><?= $product['created_at']; ?></dd>
                     </dl> <!-- item-property-hor .// -->
                     <hr>
-                    <form action="/pages/bidProduct/<?= $product['id']; ?>" method="POST">
+                    <form action="/pages/bidProduct/<?= $product['slug']; ?>" method="POST">
                         <div class="input-group mb-3">
-                            <input type="number" class="form-control <?= ($validation->hasError('bid')) ? 'is-invalid' : ''; ?>" placeholder="place your bid" name="bid">
-                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2" name="submit">BID</button>
+                            <input type="number" class="form-control <?= ($validation->hasError('bid')) ? 'is-invalid' : ''; ?>" placeholder="place your bid" name="bid" required autofocus>
+                            <button class="btn btn-outline-secondary" <?php if (!logged_in()) : ?> disabled <?php endif; ?> type="submit" id="button-addon2" name="submit">BID</button>
                             <div class="invalid-feedback">
                                 <?= $validation->getError('bid'); ?>
                             </div>
@@ -57,8 +57,6 @@
             </aside> <!-- col.// -->
         </div> <!-- row.// -->
     </div> <!-- card.// -->
-
-
 </div>
 <!--container.//-->
 <?= $this->endSection(); ?>
