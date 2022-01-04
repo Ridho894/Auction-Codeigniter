@@ -82,6 +82,7 @@ class Pages extends BaseController
     public function bidProduct($slug)
     {
         session();
+        $db = db_connect();
         $product = $this->productModel->getProduct($slug);
         $bid = $this->request->getVar('bid');
         if ($product['created_by'] === user()->username) {
@@ -89,11 +90,8 @@ class Pages extends BaseController
             return redirect()->to('/pages/detail_product/' . $product['slug']);
         }
         if ($bid >= $product['price']) {
-            // $this->bidModel->save([
-            //     'username' => user()->username,
-            //     'bid' => $this->request->getVar('bid'),
-            //     'product' => $product['judul'],
-            // ]);
+            $sql = "INSERT INTO bid (username, bid, product) VALUES (" . $db->escape(user()->username) . "," . $db->escape($this->request->getVar('bid')) . ", " . $db->escape($product['judul']) . ")";
+            $db->query($sql);
             session()->setFlashdata('pesan', "Berhasil Menawar Product " . $product['judul']);
             return redirect()->to('/');
         } else if ($bid < $product['price']) {
@@ -117,7 +115,7 @@ class Pages extends BaseController
         $user = user()->username;
         $data = [
             "title" => "Profile",
-            "product" => $this->productModel->getProductById($user)
+            "product" => $this->productModel->getProductByUser($user),
         ];
         return view('pages/profile', $data);
     }

@@ -10,8 +10,8 @@ class BidModel extends Model
     protected $useTimestamps = true;
     protected $allowedFields = ['username', 'bid', 'product'];
 
-    public function getBidByUsername($username)
+    public function getBidByProductName($product)
     {
-        return $this->where(['username' => $username])->findAll();
+        return $this->where(['product' => $product])->findAll();
     }
 }

@@ -56,7 +56,15 @@
                 <?= $product['description']; ?>
             </div>
             <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
-                <p class="mb-20">There are no bid yet.</p>
+                <?php
+                if (!$bid) :
+                ?>
+                    <p class="mb-20">There are no bid yet.</p>
+                <?php elseif ($bid) : ?>
+                    <?php foreach ($bid as $b) : ?>
+                        <h1><?= $b['username']; ?></h1>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </div>
         </div>
     </div>

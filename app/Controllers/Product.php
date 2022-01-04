@@ -3,14 +3,17 @@
 namespace App\Controllers;
 
 use App\Models\ProductModel;
+use App\Models\BidModel;
 
 class Product extends BaseController
 {
     protected $productModel;
+    protected $bidModel;
 
     public function __construct()
     {
         $this->productModel = new ProductModel();
+        $this->bidModel = new BidModel();
     }
     public function index()
     {
@@ -22,10 +25,13 @@ class Product extends BaseController
     }
     public function detail($slug)
     {
+        $product = $this->productModel->getProduct($slug);
+        $productName = $product['judul'];
+        // dd($productName);
         $data = [
             "title" => "Detail Product",
             "product" => $this->productModel->getproduct($slug),
-            // "bid" => $this->
+            "bid" => $this->bidModel->getBidByProductName($productName)
         ];
         if (empty($data['product'])) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException("Judul product " . $slug . " Tidak Ditemukan");

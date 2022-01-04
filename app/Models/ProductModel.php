@@ -17,7 +17,7 @@ class ProductModel extends Model
         }
         return $this->where(['slug' => $slug])->first();
     }
-    public function getProductById($user)
+    public function getProductByUser($user)
     {
         return $this->where(['created_by' => $user])->findAll();
     }
