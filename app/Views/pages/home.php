@@ -28,11 +28,11 @@
                 <div class="card-body">
                     <h5 class="card-title"><?= $k['judul']; ?></h5>
                     <p class="card-text">Rp.<?= $k['price']; ?></p>
-                    <a href="/pages/detailProduct/<?= $k['slug']; ?>" class="btn btn-primary">Details</a>
+                    <a href="/Pages/detailProduct/<?= $k['slug']; ?>" class="btn btn-primary">Details</a>
                 </div>
             </div>
         <?php endforeach; ?>
     </div>
-    <?= $pager->links('product', 'orang_pagination'); ?>
+    <?= $pager->links('product', 'product_pagination'); ?>
 </div>
 <?= $this->endSection(); ?>

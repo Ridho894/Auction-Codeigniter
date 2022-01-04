@@ -8,8 +8,8 @@
                     <div class="img-big-wrap">
                         <div class="item-gallery"> <img src="/img/<?= $product['sampul']; ?>" class="w-100 h-100">
                         </div>
-                    </div> <!-- slider-product.// -->
-                </article> <!-- gallery-wrap .end// -->
+                    </div>
+                </article>
             </aside>
             <aside class="col-sm-7">
                 <article class="card-body p-5">
@@ -24,7 +24,7 @@
                             } ?>
                             <span class="currency"></span><span class="num"><?= rupiah($product['price']) ?></span>
                         </span>
-                    </p> <!-- price-detail-wrap .// -->
+                    </p>
                     <dl class="item-property">
                         <dt>Description</dt>
                         <dd>
@@ -34,29 +34,33 @@
                     <dl class="param param-feature">
                         <dt>Address</dt>
                         <dd><?= $product['address']; ?></dd>
-                    </dl> <!-- item-property-hor .// -->
+                    </dl>
                     <dl class="param param-feature">
                         <dt>Owner</dt>
                         <dd><?= $product['created_by']; ?></dd>
-                    </dl> <!-- item-property-hor .// -->
+                    </dl>
                     <dl class="param param-feature">
                         <dt>Created At</dt>
                         <dd><?= $product['created_at']; ?></dd>
-                    </dl> <!-- item-property-hor .// -->
+                    </dl>
                     <hr>
-                    <form action="/pages/bidProduct/<?= $product['slug']; ?>" method="POST">
+                    <form action="/pages/bidProduct/<?= $product['slug']; ?>" method="POST" enctype="multipart/form-data">
+                        <?= csrf_field(); ?>
+                        <input type="hidden" name="username" value="<?= user()->username; ?>">
+                        <input type="hidden" name="product" value="<?= $product['judul']; ?>">
                         <div class="input-group mb-3">
                             <input type="number" class="form-control <?= ($validation->hasError('bid')) ? 'is-invalid' : ''; ?>" placeholder="place your bid" name="bid" required autofocus>
                             <button class="btn btn-outline-secondary" <?php if (!logged_in()) : ?> disabled <?php endif; ?> type="submit" id="button-addon2" name="submit">BID</button>
-                            <div class="invalid-feedback">
-                                <?= $validation->getError('bid'); ?>
-                            </div>
                         </div>
+                        <?php if (session()->getFlashdata('pesan')) : ?>
+                            <div style="color: red;">
+                                <?= session()->getFlashdata('pesan'); ?>
+                            </div>
+                        <?php endif; ?>
                     </form>
-                </article> <!-- card-body.// -->
-            </aside> <!-- col.// -->
-        </div> <!-- row.// -->
-    </div> <!-- card.// -->
+                </article>
+            </aside>
+        </div>
+    </div>
 </div>
-<!--container.//-->
 <?= $this->endSection(); ?>

@@ -5,18 +5,21 @@ namespace App\Controllers;
 use App\Models\ProductModel;
 use App\Models\ReviewModel;
 use App\Models\ProfileModel;
+use App\Models\BidModel;
 
 class Pages extends BaseController
 {
     protected $productModel;
     protected $reviewModel;
     protected $profileModel;
+    protected $bidModel;
 
     public function __construct()
     {
         $this->productModel = new ProductModel();
         $this->reviewModel = new ReviewModel();
         $this->profileModel = new ProfileModel();
+        $this->bidModel = new BidModel();
     }
 
     public function index()
@@ -27,7 +30,6 @@ class Pages extends BaseController
         } else {
             $product = $this->productModel;
         }
-        // dd($search);
         $data = [
             "title" => "Home",
             "product" => $product->paginate(6, 'product'),
@@ -80,24 +82,32 @@ class Pages extends BaseController
     public function bidProduct($slug)
     {
         session();
-        $harga = $this->productModel->getProduct($slug);
+        $product = $this->productModel->getProduct($slug);
+        // dd(user()->username);
         $bid = $this->request->getVar('bid');
-        if ($bid >= $harga['price']) {
-            session()->setFlashdata('pesan', 'Berhasil Menawar Product.');
+        if ($bid >= $product['price']) {
+            // $this->bidModel->save([
+            //     'username' => user()->username,
+            //     'bid' => $this->request->getVar('bid'),
+            //     'product' => $product['judul'],
+            // ]);
+            session()->setFlashdata('pesan', "Berhasil Menawar Product " . $product['judul']);
             return redirect()->to('/');
-        } else if ($bid < $harga['price']) {
-            return redirect()->to('/');
+        } else if ($bid < $product['price']) {
+            session()->setFlashdata('pesan', "Penawaran anda terlalu rendah");
+            return redirect()->to('/pages/detail_product/' . $product['slug']);
         }
-        if (!$this->validate([
-            'bid' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => '{field} harus diisi'
-                ]
-            ]
-        ])) {
-            return redirect()->to('/')->withInput();
-        }
+    }
+    public function bid()
+    {
+        $this->bidModel->save([
+            'username' => $this->request->getVar('username'),
+            'bid' => $this->request->getVar('bid'),
+            'product' => $this->request->getVar('judul'),
+        ]);
+        session()->setFlashdata('pesan', 'Data Berhasil Ditambahkan.');
+
+        return redirect()->to('/pages/profile');
     }
     public function profile()
     {

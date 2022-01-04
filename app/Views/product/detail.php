@@ -48,7 +48,7 @@
                 <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">Review (0)</a>
+                <a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">Bid (0)</a>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
@@ -56,8 +56,7 @@
                 <?= $product['description']; ?>
             </div>
             <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
-                <div class="review-heading">REVIEW</div>
-                <p class="mb-20">There are no review yet.</p>
+                <p class="mb-20">There are no bid yet.</p>
             </div>
         </div>
     </div>

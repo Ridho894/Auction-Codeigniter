@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-use App\Models\ReviewModel;
 use App\Models\ProductModel;
 
 class Product extends BaseController
@@ -26,6 +25,7 @@ class Product extends BaseController
         $data = [
             "title" => "Detail Product",
             "product" => $this->productModel->getproduct($slug),
+            // "bid" => $this->
         ];
         if (empty($data['product'])) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException("Judul product " . $slug . " Tidak Ditemukan");
