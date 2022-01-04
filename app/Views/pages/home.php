@@ -21,17 +21,24 @@
             <button class="btn btn-outline-secondary" type="submit" name="submit">Search</button>
         </div>
     </form>
-    <div class="" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-        <?php foreach ($product as $k) : ?>
-            <div class="card mt-3 mb-2" style="width: 20rem;">
-                <img class="card-img-top" src="/img/<?= $k["sampul"]; ?>" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title"><?= $k['judul']; ?></h5>
-                    <p class="card-text">Rp.<?= $k['price']; ?></p>
-                    <a href="/Pages/detailProduct/<?= $k['slug']; ?>" class="btn btn-primary">Details</a>
-                </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+        <?php if (!$product) : ?>
+            <div style="margin: auto;text-align: center;">
+                <img class="mt-5" src="/img/no-search.png" alt="" width="50%">
+                <h1>No Product</h1>
             </div>
-        <?php endforeach; ?>
+        <?php elseif ($product) : ?>
+            <?php foreach ($product as $k) : ?>
+                <div class="card mt-3 mb-2" style="width: 20rem;">
+                    <img class="card-img-top" src="/img/<?= $k["sampul"]; ?>" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><?= $k['judul']; ?></h5>
+                        <p class="card-text">Rp.<?= $k['price']; ?></p>
+                        <a href="/Pages/detailProduct/<?= $k['slug']; ?>" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        <?php endif; ?>
     </div>
     <?= $pager->links('product', 'product_pagination'); ?>
 </div>

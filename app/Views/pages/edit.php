@@ -1,6 +1,7 @@
 <?= $this->extend("layout/template"); ?>
 <?= $this->section("content"); ?>
-<form class="container rounded bg-white mt-5 mb-5" method="POST" action="/pages/update/<?= $user['id']; ?>">
+<form class="container rounded bg-white mt-5 mb-5" method="POST" action="/pages/update/<?= $user['id']; ?>" enctype="multipart/form-data">
+    <?= csrf_field(); ?>
     <div class="row">
         <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://bootdey.com/img/Content/avatar/avatar7.png"><span class="font-weight-bold"><?= $user['username']; ?></span><span class="text-black-50"><?= $user['email']; ?></span><span> </span></div>

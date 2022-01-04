@@ -83,8 +83,11 @@ class Pages extends BaseController
     {
         session();
         $product = $this->productModel->getProduct($slug);
-        // dd(user()->username);
         $bid = $this->request->getVar('bid');
+        if ($product['created_by'] === user()->username) {
+            session()->setFlashdata('pesan', "Anda tidak dapat menawar barang anda");
+            return redirect()->to('/pages/detail_product/' . $product['slug']);
+        }
         if ($bid >= $product['price']) {
             // $this->bidModel->save([
             //     'username' => user()->username,
@@ -123,8 +126,8 @@ class Pages extends BaseController
         session();
         $data = [
             "title" => "Edit Profile",
-            "user" => $this->profileModel->getUser($id),
             "validation" => \Config\Services::validation(),
+            "user" => $this->profileModel->getUser($id),
         ];
         if (empty($data['user'])) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException("Nama Profile " . $id . " Tidak Ditemukan");

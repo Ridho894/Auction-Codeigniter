@@ -109,7 +109,7 @@
                         <hr>
                         <div class="row">
                             <div class="col-sm-12">
-                                <a class="btn btn-info " href="/Pages/edit/<?= user()->id; ?>">Edit</a>
+                                <a class="btn btn-info " href="/pages/edit/<?= user()->id; ?>">Edit</a>
                             </div>
                         </div>
                     </div>

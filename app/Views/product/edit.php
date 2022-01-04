@@ -1,5 +1,4 @@
 <?= $this->extend("layout/template"); ?>
-
 <?= $this->section("content"); ?>
 <form method="POST" action="/product/update/<?= $product['id']; ?>" enctype="multipart/form-data">
     <?= csrf_field(); ?>

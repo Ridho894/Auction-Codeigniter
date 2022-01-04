@@ -46,7 +46,7 @@
                     <hr>
                     <form action="/pages/bidProduct/<?= $product['slug']; ?>" method="POST" enctype="multipart/form-data">
                         <?= csrf_field(); ?>
-                        <input type="hidden" name="username" value="<?= user()->username; ?>">
+                        <input type="hidden" name="username" value="<?= user() === null ? '' : user()->username; ?>">
                         <input type="hidden" name="product" value="<?= $product['judul']; ?>">
                         <div class="input-group mb-3">
                             <input type="number" class="form-control <?= ($validation->hasError('bid')) ? 'is-invalid' : ''; ?>" placeholder="place your bid" name="bid" required autofocus>

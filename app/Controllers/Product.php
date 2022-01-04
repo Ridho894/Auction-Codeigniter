@@ -130,7 +130,6 @@ class Product extends BaseController
     public function edit($slug)
     {
         session();
-        dd($slug);
         $data = [
             "title" => "Edit Product",
             "validation" => \Config\Services::validation(),
@@ -153,6 +152,24 @@ class Product extends BaseController
                 'errors' => [
                     'required' => '{field} product harus diisi',
                     'is_unique' => '{field} product sudah terdaftar'
+                ]
+            ],
+            'price' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+            'description' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+            'address' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
                 ]
             ],
             'sampul' => [
