@@ -105,12 +105,28 @@ class Pages extends BaseController
         session()->setFlashdata('pesan', 'Penawaran Berhasil Dihapus.');
         return redirect()->to('/');
     }
-    public function give($id)
+    public function give($product)
     {
-        $status = 'GIVEN...';
-        $this->bidModel->set('status', $status);
+        $BidName = $this->request->getVar("BidName");
+        // $data = [
+        //     [
+        //         'status' => 'GIVEN...',
+        //         'username' => $BidName
+        //     ],
+        //     [
+        //         'status' => 'REJECT...',
+        //         'username !=' => $BidName
+        //     ]
+        // ];
+        $Given_Status = "GIVEN...";
+        $Reject_Status = "REJECT...";
+        $this->bidModel->set('status', $Given_Status)->where('username', $BidName);
         $this->bidModel->update();
-        session()->setFlashdata('pesan', 'Produk Berhasil Dilelang.');
+        $this->bidModel->set('status', $Reject_Status)->where('username !=', $BidName);
+        $this->bidModel->update();
+        $this->productModel->where('judul', $product);
+        $this->productModel->delete();
+        session()->setFlashdata('pesan', 'Produk Berhasil Dilelang Kepada ' . $BidName);
         return redirect()->to('/');
     }
     public function profile()

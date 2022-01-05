@@ -78,7 +78,9 @@
                                 <div class="d-flex w-100 justify-content-between">
                                     <p class="mb-1">Rp<?= $b['bid']; ?></p>
                                     <div class="d-flex flex-row">
-                                        <form method="POST" action="/pages/give/<?= $b['id']; ?>" class="mr-3">
+                                        <form method="POST" action="/pages/give/<?= $b['product']; ?>" class="mr-3">
+                                            <?= csrf_field(); ?>
+                                            <input type="hidden" value="<?= $b['username']; ?>" name="BidName">
                                             <button class="btn btn-success">GIVE</button>
                                         </form>
                                         <form method="POST" action="/pages/remove/<?= $b['id']; ?>">

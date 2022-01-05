@@ -21,7 +21,8 @@
                             {
                                 $hasil_rupiah = "Rp" . number_format($angka, 2, ',', '.');
                                 return $hasil_rupiah;
-                            } ?>
+                            }
+                            ?>
                             <span class="currency"></span><span class="num"><?= rupiah($product['price']) ?></span>
                         </span>
                     </p>
