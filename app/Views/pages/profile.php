@@ -18,6 +18,24 @@
                     </div>
                 </div>
                 <div class="card mt-3">
+                    <div class="card-body">
+                        <h4>Your Bid</h4>
+                        <?php if (!$bid) : ?>
+                            <span>No Bid</span>
+                        <?php elseif ($bid) : ?>
+                            <?php foreach ($bid as $b) : ?>
+                                <div class="my-3" style="display: flex;justify-content: space-between;align-items: center;">
+                                    <div class="d-flex flex-column">
+                                        <h6><?= $b['product']; ?> (Rp<?= $b['bid']; ?>)</h6>
+                                        <span><?= $b['created_at']; ?></span>
+                                    </div>
+                                    <span class="p-2 alert-success"><?= $b['status']; ?></span>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <div class="card mt-3">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe mr-2 icon-inline">
@@ -114,7 +132,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="row gutters-sm">
                     <div class="col mb-3">
                         <div class="card h-100">
@@ -164,12 +181,8 @@
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
-
     </div>
 </div>
 <?= $this->endSection(); ?>

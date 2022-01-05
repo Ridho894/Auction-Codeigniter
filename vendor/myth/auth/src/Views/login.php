@@ -11,7 +11,7 @@
 
 					<?= view('Myth\Auth\Views\_message_block') ?>
 
-					<form action="<?= route_to('login') ?>" method="post">
+					<form action="<?= route_to('login') ?>" method="post" autocomplete="off">
 						<?= csrf_field() ?>
 
 						<?php if ($config->validFields === ['email']) : ?>

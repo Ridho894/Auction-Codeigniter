@@ -1,5 +1,4 @@
 <?= $this->extend("layout/template"); ?>
-
 <?= $this->section("content"); ?>
 <div class="container" style="background-color: white;">
     <div class="heading-section mt-4">
@@ -28,7 +27,7 @@
                         </div>
                         <span>0 Review</span>
                     </div>
-                    <div class="product-price-discount"><span><?= $product['price']; ?></span></div>
+                    <div class="product-price-discount"><span>Rp<?= $product['price']; ?></span></div>
                 </div>
                 <p><?= $product['address']; ?></p>
                 <div class="product-count">
@@ -48,7 +47,15 @@
                 <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">Bid (0)</a>
+                <a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">
+                    <?php
+                    if ($bid <= 0) :
+                    ?>
+                        Bid (0)
+                    <?php elseif ($bid > 0) : ?>
+                        Bid (<?php echo count($bid) ?>)
+                    <?php endif; ?>
+                </a>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
@@ -62,7 +69,21 @@
                     <p class="mb-20">There are no bid yet.</p>
                 <?php elseif ($bid) : ?>
                     <?php foreach ($bid as $b) : ?>
-                        <h1><?= $b['username']; ?></h1>
+                        <div class="list-group my-4">
+                            <div class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1"><?= $b['username']; ?></h5>
+                                    <small><?= $b['created_at']; ?></small>
+                                </div>
+                                <div class="d-flex w-100 justify-content-between">
+                                    <p class="mb-1">Rp<?= $b['bid']; ?></p>
+                                    <form method="POST" action="/pages/remove/<?= $b['id']; ?>">
+                                        <button class="btn btn-success">GIVE</button>
+                                        <button class="btn btn-warning">REMOVE</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     <?php endforeach; ?>
                 <?php endif; ?>
             </div>

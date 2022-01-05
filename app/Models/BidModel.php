@@ -14,4 +14,8 @@ class BidModel extends Model
     {
         return $this->where(['product' => $product])->findAll();
     }
+    public function getBidByUsername($username)
+    {
+        return $this->where(['username' => $username])->findAll();
+    }
 }

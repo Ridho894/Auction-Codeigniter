@@ -49,7 +49,7 @@
                         <input type="hidden" name="username" value="<?= user() === null ? '' : user()->username; ?>">
                         <input type="hidden" name="product" value="<?= $product['judul']; ?>">
                         <div class="input-group mb-3">
-                            <input type="number" class="form-control <?= ($validation->hasError('bid')) ? 'is-invalid' : ''; ?>" placeholder="place your bid" name="bid" required autofocus>
+                            <input type="number" class="form-control" placeholder="place your bid" name="bid" required autofocus>
                             <button class="btn btn-outline-secondary" <?php if (!logged_in()) : ?> disabled <?php endif; ?> type="submit" id="button-addon2" name="submit">BID</button>
                         </div>
                         <?php if (session()->getFlashdata('pesan')) : ?>

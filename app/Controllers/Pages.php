@@ -99,16 +99,11 @@ class Pages extends BaseController
             return redirect()->to('/pages/detail_product/' . $product['slug']);
         }
     }
-    public function bid()
+    public function remove($id)
     {
-        $this->bidModel->save([
-            'username' => $this->request->getVar('username'),
-            'bid' => $this->request->getVar('bid'),
-            'product' => $this->request->getVar('judul'),
-        ]);
-        session()->setFlashdata('pesan', 'Data Berhasil Ditambahkan.');
-
-        return redirect()->to('/pages/profile');
+        $this->bidModel->delete($id);
+        session()->setFlashdata('pesan', 'Penawaran Berhasil Dihapus.');
+        return redirect()->to('/');
     }
     public function profile()
     {
@@ -116,6 +111,7 @@ class Pages extends BaseController
         $data = [
             "title" => "Profile",
             "product" => $this->productModel->getProductByUser($user),
+            "bid" => $this->bidModel->getBidByUsername($user),
         ];
         return view('pages/profile', $data);
     }
