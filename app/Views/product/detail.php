@@ -77,10 +77,14 @@
                                 </div>
                                 <div class="d-flex w-100 justify-content-between">
                                     <p class="mb-1">Rp<?= $b['bid']; ?></p>
-                                    <form method="POST" action="/pages/remove/<?= $b['id']; ?>">
-                                        <button class="btn btn-success">GIVE</button>
-                                        <button class="btn btn-warning">REMOVE</button>
-                                    </form>
+                                    <div class="d-flex flex-row">
+                                        <form method="POST" action="/pages/give/<?= $b['id']; ?>" class="mr-3">
+                                            <button class="btn btn-success">GIVE</button>
+                                        </form>
+                                        <form method="POST" action="/pages/remove/<?= $b['id']; ?>">
+                                            <button class="btn btn-warning">REMOVE</button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>

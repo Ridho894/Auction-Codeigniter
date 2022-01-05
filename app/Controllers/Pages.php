@@ -105,6 +105,14 @@ class Pages extends BaseController
         session()->setFlashdata('pesan', 'Penawaran Berhasil Dihapus.');
         return redirect()->to('/');
     }
+    public function give($id)
+    {
+        $status = 'GIVEN...';
+        $this->bidModel->set('status', $status);
+        $this->bidModel->update();
+        session()->setFlashdata('pesan', 'Produk Berhasil Dilelang.');
+        return redirect()->to('/');
+    }
     public function profile()
     {
         $user = user()->username;

@@ -19,7 +19,7 @@
                 </div>
                 <div class="card mt-3">
                     <div class="card-body">
-                        <h4>Your Bid</h4>
+                        <h4>My Bid</h4>
                         <?php if (!$bid) : ?>
                             <span>No Bid</span>
                         <?php elseif ($bid) : ?>
