@@ -29,7 +29,7 @@
                                         <h6><?= $b['product']; ?> (Rp<?= $b['bid']; ?>)</h6>
                                         <span><?= $b['created_at']; ?></span>
                                     </div>
-                                    <span class="p-2 alert-success"><?= $b['status']; ?></span>
+                                    <span class="p-2 <?= $b['status'] === "GIVEN..." && "WAITING..." ? "alert-success" : "alert-danger"; ?>"><?= $b['status']; ?></span>
                                 </div>
                             <?php endforeach; ?>
                         <?php endif; ?>

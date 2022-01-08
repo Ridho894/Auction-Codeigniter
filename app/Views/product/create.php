@@ -1,7 +1,7 @@
 <?= $this->extend("layout/template"); ?>
 
 <?= $this->section("content"); ?>
-<form method="POST" action="/product/save" enctype="multipart/form-data">
+<form method="POST" action="/product/save" enctype="multipart/form-data" autocomplete="off">
     <?= csrf_field(); ?>
     <input type="hidden" name="created_by" value="<?= user()->username; ?>">
     <div class="col-md-8 offset-md-2">
