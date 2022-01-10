@@ -45,7 +45,7 @@
                         <dd><?= $product['created_at']; ?></dd>
                     </dl>
                     <hr>
-                    <form action="/pages/bidProduct/<?= $product['slug']; ?>" method="POST" enctype="multipart/form-data">
+                    <form autocomplete="off" action="/pages/bidProduct/<?= $product['slug']; ?>" method="POST" enctype="multipart/form-data">
                         <?= csrf_field(); ?>
                         <input type="hidden" name="username" value="<?= user() === null ? '' : user()->username; ?>">
                         <input type="hidden" name="product" value="<?= $product['judul']; ?>">

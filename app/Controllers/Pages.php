@@ -67,9 +67,9 @@ class Pages extends BaseController
     public function detailProduct($slug)
     {
         session();
-        $harga = $this->productModel->getProduct($slug);
-        $bid = $this->request->getVar('bid');
-        if ($bid >= $harga['price']) {
+        $product = $this->productModel->getProduct($slug);
+        $bid_calc = $this->request->getVar('bid');
+        if ($bid_calc >= $product['price']) {
             return view('welcome_message');
         }
         $data = [
@@ -108,16 +108,6 @@ class Pages extends BaseController
     public function give($product)
     {
         $BidName = $this->request->getVar("BidName");
-        // $data = [
-        //     [
-        //         'status' => 'GIVEN...',
-        //         'username' => $BidName
-        //     ],
-        //     [
-        //         'status' => 'REJECT...',
-        //         'username !=' => $BidName
-        //     ]
-        // ];
         $Given_Status = "GIVEN...";
         $Reject_Status = "REJECT...";
         $this->bidModel->set('status', $Given_Status)->where('username', $BidName);
@@ -139,16 +129,16 @@ class Pages extends BaseController
         ];
         return view('pages/profile', $data);
     }
-    public function edit($id)
+    public function edit($username)
     {
         session();
         $data = [
             "title" => "Edit Profile",
             "validation" => \Config\Services::validation(),
-            "user" => $this->profileModel->getUser($id),
+            "user" => $this->profileModel->getUser($username),
         ];
         if (empty($data['user'])) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException("Nama Profile " . $id . " Tidak Ditemukan");
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("Nama Profile " . $username . " Tidak Ditemukan");
         }
         return view("pages/edit", $data);
     }
@@ -162,9 +152,10 @@ class Pages extends BaseController
                 ]
             ],
             'phone_number' => [
-                'rules' => 'required',
+                'rules' => 'required|max_length[8]',
                 'errors' => [
                     'required' => '{field} profile harus diisi',
+                    'max_length[8]' => '{field} profile terlalu banyak'
                 ]
             ],
             'address' => [
@@ -183,7 +174,7 @@ class Pages extends BaseController
             'address' => $this->request->getVar('address'),
         ]);
 
-        session()->setFlashdata('pesan', 'Data Berhasil Diubah.');
+        session()->setFlashdata('pesan', 'Profile Berhasil Diubah.');
 
         return redirect()->to('/pages/profile');
     }

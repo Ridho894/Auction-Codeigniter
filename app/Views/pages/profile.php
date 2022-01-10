@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex flex-column align-items-center text-center">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                            <img src="/img/avatar7.png" alt="profile" class="rounded-circle" width="150">
                             <div class="mt-3">
                                 <h4><?= user()->username; ?></h4>
                                 <p class="text-secondary mb-1"><?= user()->email; ?></p>
@@ -29,13 +29,13 @@
                                         <h6><?= $b['product']; ?> (Rp<?= $b['bid']; ?>)</h6>
                                         <span><?= $b['created_at']; ?></span>
                                     </div>
-                                    <span class="p-2 <?= $b['status'] === "GIVEN..." && "WAITING..." ? "alert-success" : "alert-danger"; ?>"><?= $b['status']; ?></span>
+                                    <span class="p-2 <?= $b['status'] === "GIVEN..." || "WAITING..." ? "alert-success" : "alert-danger"; ?>"><?= $b['status']; ?></span>
                                 </div>
                             <?php endforeach; ?>
                         <?php endif; ?>
                     </div>
                 </div>
-                <div class="card mt-3">
+                <!-- <div class="card mt-3">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe mr-2 icon-inline">
@@ -72,7 +72,7 @@
                             <span class="text-secondary">-</span>
                         </li>
                     </ul>
-                </div>
+                </div> -->
             </div>
             <div class="col-md-8">
                 <div class="card mb-3">
@@ -127,7 +127,7 @@
                         <hr>
                         <div class="row">
                             <div class="col-sm-12">
-                                <a class="btn btn-info " href="/pages/edit/<?= user()->id; ?>">Edit</a>
+                                <a class="btn btn-info " href="/pages/edit/<?= user()->username; ?>">Edit</a>
                             </div>
                         </div>
                     </div>

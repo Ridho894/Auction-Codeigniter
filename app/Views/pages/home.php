@@ -15,7 +15,7 @@
     </div>
 <?php endif; ?>
 <div class="container">
-    <form action="" method="POST">
+    <form action="" method="POST" autocomplete="off">
         <div class="input-group mt-3">
             <input type="text" class="form-control" placeholder="Search product..." name="search">
             <button class="btn btn-outline-secondary" type="submit" name="submit">Search</button>

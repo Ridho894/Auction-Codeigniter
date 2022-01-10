@@ -120,9 +120,9 @@ class Product extends BaseController
     }
     public function delete($id)
     {
-        // Cari Gambar berdasarkan ID
+        // Cari Gambar ID
         $product = $this->productModel->find($id);
-        // Cek Jika file gambar default
+        // Cek file gambar default
         if ($product['sampul'] != 'default.jpg') {
             // Hapus Gambar
             unlink('img/' . $product['sampul']);
@@ -141,6 +141,9 @@ class Product extends BaseController
             "validation" => \Config\Services::validation(),
             'product' => $this->productModel->getproduct($slug),
         ];
+        if (empty($data['product'])) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("Nama Product " . $slug . " Tidak Ditemukan");
+        }
         return view('product/edit', $data);
     }
     public function update($id)

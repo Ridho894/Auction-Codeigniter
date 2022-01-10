@@ -15,11 +15,11 @@ class ProfileModel extends Model
         return $this->where(['id' => $id])->findAll();
     }
 
-    public function getUser($id = null)
+    public function getUser($username = null)
     {
-        if ($id == null) {
+        if ($username == null) {
             return $this->findAll();
         }
-        return $this->where(['id' => $id])->first();
+        return $this->where(['username' => $username])->first();
     }
 }

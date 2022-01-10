@@ -2,6 +2,7 @@
 <?= $this->section("content"); ?>
 <form class="container rounded bg-white mt-5 mb-5" method="POST" action="/pages/update/<?= $user['id']; ?>" enctype="multipart/form-data">
     <?= csrf_field(); ?>
+    <input type="hidden" name="id" value="<?= user()->id; ?>">
     <div class="row">
         <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://bootdey.com/img/Content/avatar/avatar7.png"><span class="font-weight-bold"><?= $user['username']; ?></span><span class="text-black-50"><?= $user['email']; ?></span><span> </span></div>
@@ -19,14 +20,14 @@
                     </div>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-md-12"><label class="labels">Mobile Number</label><input type="number" class="form-control <?= ($validation->hasError('phone_number')) ? 'is-invalid' : ''; ?>" placeholder="enter phone number" value="<?= (old('phone_number')) ? old('phone_number') : $user['phone_number'] ?>">
+                    <div class="col-md-12"><label class="labels">Mobile Number</label><input type="number" name="phone_number" class="form-control <?= ($validation->hasError('phone_number')) ? 'is-invalid' : ''; ?>" placeholder="enter phone number" value="<?= (old('phone_number')) ? old('phone_number') : $user['phone_number'] ?>">
                         <div class="invalid-feedback">
                             <?= $validation->getError('phone_number'); ?>
                         </div>
                     </div>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-md-12"><label class="labels">Address</label><input type="text" class="form-control <?= ($validation->hasError('address')) ? 'is-invalid' : ''; ?>" placeholder="enter address" value="<?= (old('address')) ? old('address') : $user['address'] ?>">
+                    <div class="col-md-12"><label class="labels">Address</label><input type="text" name="address" class="form-control <?= ($validation->hasError('address')) ? 'is-invalid' : ''; ?>" placeholder="enter address" value="<?= (old('address')) ? old('address') : $user['address'] ?>">
                         <div class="invalid-feedback">
                             <?= $validation->getError('address'); ?>
                         </div>

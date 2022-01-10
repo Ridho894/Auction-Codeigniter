@@ -14,7 +14,7 @@
             <div class="card-body">
                 <form class="form" role="form" autocomplete="off">
                     <div class="form-group row">
-                        <label for="judul" class="col-lg-3 col-form-label form-control-label">Judul</label>
+                        <label for="judul" class="col-lg-3 col-form-label form-control-label">Title</label>
                         <div class="col-lg-9">
                             <input type="text" class="form-control <?= ($validation->hasError('judul')) ? 'is-invalid' : ''; ?>" id="judul" name="judul" autofocus value="<?= (old('judul')) ? old('judul') : $product['judul'] ?>">
                             <div class="invalid-feedback">
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="sampul" class="col-sm-3 col-form-label">Sampul</label>
+                        <label for="sampul" class="col-sm-3 col-form-label">Picture</label>
                         <div class="col-sm-2">
                             <img src="/img/default.jpg" class="img-thumbnail img-preview" />
                         </div>
@@ -60,7 +60,7 @@
                                 <div class="invalid-feedback">
                                     <?= $validation->getError('sampul'); ?>
                                 </div>
-                                <label class="custom-file-label" for="sampul">Pilih gambar</label>
+                                <label class="custom-file-label" for="sampul">Select Picture</label>
                             </div>
                         </div>
                     </div>
