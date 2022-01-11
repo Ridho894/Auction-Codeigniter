@@ -26,8 +26,11 @@ class Product extends BaseController
     public function detail($slug)
     {
         $product = $this->productModel->getProduct($slug);
+        $user = user()->username;
+        if ($product['created_by'] != $user) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("NO ACCESS");
+        }
         $productName = $product['judul'];
-        // dd($productName);
         $data = [
             "title" => "Detail Product",
             "product" => $this->productModel->getproduct($slug),
@@ -122,6 +125,10 @@ class Product extends BaseController
     {
         // Cari Gambar ID
         $product = $this->productModel->find($id);
+        $user = user()->username;
+        if ($product['created_by'] != $user) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("NO ACCESS!");
+        }
         // Cek file gambar default
         if ($product['sampul'] != 'default.jpg') {
             // Hapus Gambar
@@ -136,6 +143,11 @@ class Product extends BaseController
     public function edit($slug)
     {
         session();
+        $user = user()->username;
+        $myproduct = $this->productModel->getProduct($slug);
+        if ($myproduct['created_by'] != $user) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("NO ACCESS!");
+        }
         $data = [
             "title" => "Edit Product",
             "validation" => \Config\Services::validation(),

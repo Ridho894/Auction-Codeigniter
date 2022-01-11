@@ -132,6 +132,9 @@ class Pages extends BaseController
     public function edit($username)
     {
         session();
+        if ($username != user()->username) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("NO ACCESS!");
+        };
         $data = [
             "title" => "Edit Profile",
             "validation" => \Config\Services::validation(),
