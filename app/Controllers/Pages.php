@@ -170,10 +170,15 @@ class Pages extends BaseController
         ])) {
             return redirect()->to('/pages/edit/' . $this->request->getVar('id'))->withInput();
         }
+        $product = $this->productModel->getProductByUser(user()->username);
+        $account = $this->request->getVar('username');
+        $this->productModel->set('created_by', $account)->where('created_by', user()->username);
+        $this->productModel->update();
+
         $this->profileModel->save([
             'id' => $id,
             'username' => $this->request->getVar('username'),
-            'phone_number' => $this->request->getVar('phone_number'),
+            'phone_number' => $account,
             'address' => $this->request->getVar('address'),
         ]);
 
