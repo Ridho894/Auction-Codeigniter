@@ -18,8 +18,8 @@ class Pages extends BaseController
     {
         $this->productModel = new ProductModel();
         $this->reviewModel = new ReviewModel();
-        $this->profileModel = new ProfileModel();
         $this->bidModel = new BidModel();
+        $this->profileModel = new ProfileModel();
     }
 
     public function index()
@@ -131,7 +131,6 @@ class Pages extends BaseController
     }
     public function edit($username)
     {
-        session();
         if ($username != user()->username) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException("NO ACCESS!");
         };
