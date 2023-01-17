@@ -427,6 +427,7 @@ INSERT INTO `review` (`id`, `nama`, `description`, `created_at`, `updated_at`) V
 CREATE TABLE `users` (
   `id` int(11) UNSIGNED NOT NULL,
   `email` varchar(255) NOT NULL,
+  `is_admin` int(1) NOT NULL DEFAULT 0,
   `username` varchar(30) DEFAULT NULL,
   `phone_number` int(20) NOT NULL,
   `address` varchar(255) NOT NULL DEFAULT 'INDONESIA',
