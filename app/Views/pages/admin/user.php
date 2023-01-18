@@ -34,7 +34,7 @@
                             <td><?= $k['phone_number']; ?></td>
                             <td><?= $k['created_at']; ?></td>
                             <td>
-                                <a href="">Edit</a>
+                                <a href="/admin/edit/<?= $k['id']; ?>">Edit</a>
                                 <span>||</span>
                                 <form action="/admin/deleteUser/<?= $k['id']; ?>" method="POST">
                                     <?= csrf_field(); ?>

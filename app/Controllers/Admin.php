@@ -39,6 +39,38 @@ class Admin extends BaseController
         ]);
     }
 
+    public function edit($id)
+    {
+        session();
+        $user = $this->clientModel->find($id);
+
+        $data = [
+            "title" => "User",
+            "user" => $user,
+        ];
+
+        return view('pages/admin/user/edit', $data);
+    }
+
+    public function update($id)
+    {
+        $username = $this->request->getVar('username');
+        $email = $this->request->getVar('email');
+        $address = $this->request->getVar('address');
+        $phone_number = $this->request->getVar('phone_number');
+        $status = $this->request->getVar('active');
+
+        $this->clientModel->save([
+            'id' => $id,
+            'username' => $username,
+            'email' => $email,
+            'address' => $address,
+            'phone_number' => (int)$phone_number,
+            'active' => $status,
+        ]);
+        return redirect()->to('/admin/user');
+    }
+
     public function create()
     {
         return view('pages/admin/user/create', [
