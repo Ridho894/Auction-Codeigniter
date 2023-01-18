@@ -90,7 +90,8 @@ class Pages extends BaseController
             return redirect()->to('/pages/detail_product/' . $product['slug']);
         }
         if ($bid >= $product['price']) {
-            $sql = "INSERT INTO bid (username, bid, product) VALUES (" . $db->escape(user()->username) . "," . $db->escape($this->request->getVar('bid')) . ", " . $db->escape($product['judul']) . ")";
+            $sql = "INSERT INTO bid (username, bid, product) VALUES (" . $db->escape(user()->username) .
+                "," . $db->escape($this->request->getVar('bid')) . ", " . $db->escape($product['judul']) . ")";
             $db->query($sql);
             session()->setFlashdata('pesan', "Berhasil Menawar Product " . $product['judul']);
             return redirect()->to('/');

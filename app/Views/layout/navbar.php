@@ -17,7 +17,11 @@
                 </li>
             </ul>
             <?php if (logged_in()) : ?>
-                <a href="/pages/profile" class="nav-link" type="button">My Profile</a>
+                <?php if (user()->is_admin === "0") : ?>
+                    <a href="/pages/profile" class="nav-link" type="button">My Profile</a>
+                <?php elseif (user()->is_admin === "1") : ?>
+                    <a href="/admin" class="nav-link" type="button">My Profile</a>
+                <?php endif; ?>
             <?php else : ?>
                 <a href="/login" class="btn btn-primary" type="button">LOGIN</a>
                 <a href="/register" class="btn btn-danger ml-3" type="button">REGISTER</a>

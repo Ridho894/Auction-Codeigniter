@@ -1,4 +1,6 @@
-<?php namespace Myth\Auth\Authentication;
+<?php
+
+namespace Myth\Auth\Authentication;
 
 use Myth\Auth\Entities\User;
 
@@ -30,7 +32,7 @@ interface AuthenticatorInterface
      *
      * @return bool|User
      */
-    public function validate(array $credentials, bool $returnUser=false);
+    public function validate(array $credentials, bool $returnUser = false);
 
     /**
      * Returns the User instance for the current logged in user.

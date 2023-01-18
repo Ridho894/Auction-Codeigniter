@@ -77,6 +77,7 @@ user_guide_src/build/*
 # Test Files
 #-------------------------
 tests/coverage*
+public/vendor
 
 # Don't save phpunit under version control.
 phpunit
@@ -84,7 +85,7 @@ phpunit
 #-------------------------
 # Composer
 #-------------------------
-vendor/
+/vendor
 composer.lock
 
 #-------------------------
@@ -119,8 +120,6 @@ nb-configuration.xml
 *.sublime-project
 .phpintel
 /api/
-
-/vendor
 
 # Visual Studio Code
 .vscode/
