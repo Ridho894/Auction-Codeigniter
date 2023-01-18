@@ -46,6 +46,12 @@ class Admin extends BaseController
         ]);
     }
 
+    public function deleteUser($id)
+    {
+        $this->clientModel->delete($id);
+        return redirect()->to('/admin/user');
+    }
+
     public function createUser()
     {
         $username = $this->request->getVar('username');

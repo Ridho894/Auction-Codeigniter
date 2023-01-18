@@ -34,9 +34,13 @@
                             <td><?= $k['phone_number']; ?></td>
                             <td><?= $k['created_at']; ?></td>
                             <td>
-                                <a href="/user/edit" onclick="">Edit</a>
+                                <a href="">Edit</a>
                                 <span>||</span>
-                                <a href="" class="text-danger">Delete</a>
+                                <form action="/admin/deleteUser/<?= $k['id']; ?>" method="POST">
+                                    <?= csrf_field(); ?>
+
+                                    <button type="submit" class="text-danger" style="border: 0px;background-color: transparent;">Delete</button>
+                                </form>
                             </td>
                         </tr>
                     <?php endforeach; ?>
