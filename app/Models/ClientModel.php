@@ -8,7 +8,10 @@ class ClientModel extends Model
 {
     protected $table = "users";
     protected $useTimestamps = true;
-    protected $allowedFields = ['id', 'email', 'password_hash', 'phone_number', 'username', 'address', 'active', 'created_at', 'is_admin'];
+    protected $allowedFields = [
+        'id', 'email', 'password_hash', 'phone_number', 'username',
+        'address', 'active', 'created_at', 'is_admin'
+    ];
 
     public function getUser()
     {
